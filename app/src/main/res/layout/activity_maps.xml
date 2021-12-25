@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner
+        android:layout_alignParentStart="true"
+        android:id="@+id/users_spn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:gravity="center_horizontal"
+        app:StartSearchTintColor="@android:color/white"
+        app:DoneSearchTintColor="@android:color/holo_purple"
+        app:RevealViewBackgroundColor="@android:color/holo_purple"
+        app:SearchViewBackgroundColor="@android:color/secondary_text_dark"
+        app:ShowBorders="false"
+
+        android:layout_alignParentTop="true"
+        app:RevealEmptyText="Touch to select a user"
+        app:SpinnerExpandHeight="300dp"/>
+
+    <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/delete_btn"
+        android:layout_below="@+id/users_spn"
+        tools:context=".MapsActivity" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:backgroundTint="@color/OrangeRed"
+        android:padding="10dp"
+        android:text="@string/delete"
+        android:visibility="visible"
+        app:icon="@drawable/ic_baseline_delete_24" />
+</RelativeLayout>

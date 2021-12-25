@@ -1,0 +1,35 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="Identity">
+
+        <EditTextPreference
+            app:key="username"
+            app:title="Enter your name"
+            app:useSimpleSummaryProvider="true"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/sync_header">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="test"
+
+            app:summary="syncing intervals unit will be seconds instead of minutes in test mode "
+            android:title="Test mode" />
+        <SeekBarPreference
+            android:max="60"
+            app:min="1"
+            app:defaultValue="10"
+            app:showSeekBarValue="true"
+            app:key="sync"
+            app:title="Syncing intervals"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
